@@ -1,0 +1,51 @@
+#dropProfile {
+    li {
+        border: 1px solid var(--c-grey-border-dark);
+        overflow: hidden;
+    }
+    #vertDrop {
+        img {
+            height: 100px;
+            width: 20px;
+        }
+    }
+    #horDrop {
+        img {
+            height: 20px;
+            width: 100px;
+        }
+    }
+}
+
+.alignment {
+    li {
+        border: 1px solid var(--c-grey-border-dark);
+        overflow: hidden;
+    }
+    #horAlignment {
+        img {
+            width: 70%;
+        }
+    }
+    #vertAlignment {
+        img {
+            width: 70%;
+        }
+    }
+}
+
+.alignment-modal-error {
+    transition: .5s;
+    top: 174px;
+    display: none;
+    position: absolute;
+    box-shadow: 0 0 4px red;
+    border-radius: 8px;
+    z-index: 5000;
+    background-color: white;
+    width: fit-content;
+    padding: 10px;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: red;
+}

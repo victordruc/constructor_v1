@@ -1,0 +1,134 @@
+.my-project_header {
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
+    .navbar {
+        background-color: var(--c-primary);
+    }
+    .navbar-brand {
+        color: white;
+    }
+    .navbar-toggler {
+        border-color: white;
+        i {
+            color: white;
+        }
+        &:focus {
+            box-shadow: 0 0 0 0.1rem white;
+        }
+    }
+    .btn-outline-success {
+        color: white;
+        border-color: white;
+        &:focus {
+            box-shadow: 0 0 0 0.1rem white;
+        }
+        &:active {
+            background-color: transparent;
+            border: 1px solid white;
+            box-shadow: inset 0px 0px 0px white;;
+        }
+        &:hover {
+            background-color: white;
+            color: var(--c-primary);
+            border: 1px solid white;
+        }
+    }
+    .form-control {
+        &:focus {
+            box-shadow: 0 0 0 0.1rem white;
+        }
+        &:active {
+            background-color: transparent;
+            border: 1px solid white;
+            box-shadow: inset 0px 0px 0px white;;
+        }
+        &:hover {
+            background-color: white;
+            border: 1px solid white;
+        }
+    }
+}
+
+.my-project.main {
+    height: fit-content;
+    min-height: 100%;
+    &>.container {
+        position: relative;
+        padding-top: 90px;
+        .col {
+            margin-bottom: var(--bs-gutter-y);
+            margin-top: 0;
+        }
+        .card {
+            .card-body {
+                color: var(--c-dark);
+                text-align: center;
+            }
+            .card-link {
+                text-transform: uppercase;
+            }
+            .card-text {
+                color: var(--c-grey-l-0);
+            }
+        }
+        .my-project__add-card {
+            margin-bottom: var(--bs-gutter-y);
+            margin-top: 0;
+            .card {
+                overflow: hidden;
+                width: 100%;
+                .card-header {
+                    border-bottom: none;
+                    text-align: center;
+                    text-transform: uppercase;
+                    background-color: var(--c-primary)
+                }
+                .card-body {
+                    padding: 0;
+                    cursor: pointer;
+                    background-color: lighten($c-grey-l-0, 32);
+                    transition: .2s;
+                    &:hover {
+                        transition: .2s;
+                        background-color: lighten($c-grey-l-0, 26);
+                    }
+                    i {
+                        color: $primary;
+                        padding-top: 60px;
+                        padding-bottom: 60px;
+                        font-size: 70px;
+                    }
+                }
+            }   
+        }
+    }
+}
+
+#nameProject {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    left: 0;
+    z-index: 2000;
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+    height: calc(var(--s-controls) - 10px);
+    background-color: $primary;
+    border: 1px solid var(--c-white);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: var(--shadow-price);
+    padding: 0 30px;
+    display: none;
+    &::after {
+        content: "*";
+        padding-left: 4px;
+        display: var(--display-project-save);
+    }
+}
+
+.toast .toast-body {
+    color: var(--c-dark);
+}

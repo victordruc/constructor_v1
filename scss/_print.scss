@@ -1,0 +1,63 @@
+@media print {
+  .main > *:not(.builder) {
+    display: none !important;
+  }
+  .builder {
+    overflow: visible !important;
+  }
+  #finalDoor {
+    width: 88%;
+  }
+  #finalDoor div,
+  #infoPanelDoor {
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  #infoPanelDoor {
+    overflow: visible;
+    height: auto;
+  }
+
+  #finalDoor .divDoor {
+    position: relative !important;
+    left: 0 !important;
+    top: 10px !important;
+  }
+  .recycled_img {
+    display: none;
+  }
+  #heightInfo {
+    display: none !important;
+  }
+  #topInfo {
+    display: none !important;
+  }
+  #closeInfoPanelDoor {
+    display: none;
+  }
+  .price {
+    -webkit-print-color-adjust: exact !important;
+  }
+  #orderBuyContainer {
+    -webkit-print-color-adjust: exact !important;
+    overflow: visible !important;
+    #closeBuyOrder {
+      display: none !important;
+    }
+    .btn.btn-outline-primary {
+      display: none !important;
+    }
+  }
+  .reset-single-door {
+    display: none !important;
+  }
+  .final-door-control-right {
+    display: none !important;
+  }
+  #information {
+    display: none !important;
+  }
+  @page {
+    size: landscape;
+  }
+}

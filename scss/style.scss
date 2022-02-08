@@ -1,0 +1,54 @@
+@import "_variables";
+@import "_containerDoor";
+@import "_all";
+@import "_rightPanel.scss";
+@import "_builder.scss";
+@import "_info.scss";
+@import "_leftPanel.scss";
+@import "_dropProfile.scss";
+@import "_print.scss";
+@import "_labelAlertForm.scss";
+@import "_inputProfileParams.scss";
+@import "_orderBuy.scss";
+@import "_resetButton.scss";
+@import "_panelInfoModal.scss";
+@import "_img-foto-fasad.scss";
+@import "_final-door-control-right.scss";
+@import "_cropper.scss";
+@import "_assets.scss";
+@import "_slick.scss";
+@import "_slick-theme.scss";
+@import "_myProject.scss";
+@import "_admin.scss";
+
+.recycled_img {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+@media (max-width: 1300px) {
+    .recycled_img {
+        right: 20px;
+    }
+}
+
+.list--image-fitting {
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    margin: auto;
+}
+
+#fittingContainer {
+    .list-item {
+        position: relative;
+        i {
+            position: absolute;
+            right: 8px;
+            top: 4px;
+            color: var(--c-primary);
+        }
+    }
+}

@@ -1,0 +1,46 @@
+#finalDoor {
+  width: 82%;
+  position: relative;
+  height: 62%;
+  border: 10px solid #88908f;
+  background-image: url(../images/background.svg);
+  box-shadow: 4px 4px 10px #88908f;
+  z-index: 1400;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: #b8c0c0;
+    bottom: -30px;
+    box-shadow: 4px 4px 10px #b8c0c0, inset 0 4px 8px #88908f;
+  }
+  .imgBackDoor .multi {
+    background-size: 100% 100%;
+    cursor: pointer;
+    box-shadow: inset 0 0 10px #474747;
+    &.isSelected {
+      border: 1px dashed white;
+      opacity: .6;
+    }
+  }
+  .vertical_profile, .horizontal_profile {
+    &.control_profile{
+      cursor: move;
+    }
+  }
+  
+}
+
+@media (max-width: 1400px) {
+  #finalDoor {
+    width: 80%;
+  }
+}
+
+@media (max-width: 640px) {
+  #finalDoor {
+    width: 78%;
+  }
+}

@@ -1,0 +1,34 @@
+.final-door-control-right {
+    position: absolute;
+    right: -72px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    div {
+        width: 54px;
+        height: 54px;
+        background-color: #7d8586;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 100%;
+        margin-bottom: 20px;
+        transition: .5s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.92;
+            background-color: #9a9fa0;
+        }
+        &.isSelected {
+            background-color: white;
+            path {
+                fill: #ef912d;
+            }
+        }
+    }
+
+}
+
+//     filter: invert(26%) sepia(70%) saturate(1162%) hue-rotate(323deg) brightness(92%) contrast(72%);

@@ -1,0 +1,200 @@
+.img-foto-fasad {
+  width: 80%;
+  height: 90%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.isSelected {
+    border: 1px dashed rgb(131, 139, 140);
+    z-index: 2000 !important;
+  }
+  .img-foto-fasad--image {
+    width: 96%;
+    height: 96%;
+  }
+  .div-for-control {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .fasad-control--move {
+      width: 29px;
+      height: 29px;
+      text-align: center;
+      background-color: #838b8c;
+      border-radius: 100%;
+      position: absolute;
+      z-index: 3100 !important;
+      margin: auto;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        opacity: 0.92;
+        background-color: #9a9fa0;
+      }
+      &:nth-child(1) {
+        top: -14.5px;
+        left: 0;
+        right: 0;
+      }
+      &:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        right: -14.5px;
+      }
+      &:nth-child(3) {
+        left: 0;
+        bottom: -14.5px;
+        right: 0;
+      }
+      &:nth-child(4) {
+        top: 0;
+        left: -14.5px;
+        bottom: 0;
+      }
+    }
+    .fasad-control--extinds {
+      width: 80px;
+      height: 29px;
+      text-align: center;
+
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      z-index: 3100 !important;
+      margin: auto;
+      cursor: pointer;
+      div {
+        background-color: #838b8c;
+        border-radius: 50%;
+        width: 29px;
+        height: 29px;
+        transition: 0.5s;
+        &:nth-child(2) {
+          position: relative;
+          &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url("../images/minus_control.png");
+            background-repeat: no-repeat;
+            top: 8px;
+            right: 13.4px;
+            transform: rotate(90deg);
+          }
+        }
+        &:hover {
+          opacity: 0.92;
+          background-color: #9a9fa0;
+        }
+      }
+      &:nth-child(1) {
+        top: -14.5px;
+        left: 0;
+        right: 0;
+      }
+      &:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        right: -40px;
+        div:nth-child(1) {
+          transform: rotate(90deg);
+        }
+      }
+      &:nth-child(3) {
+        left: 0;
+        bottom: -14.5px;
+        right: 0;
+      }
+      &:nth-child(4) {
+        top: 0;
+        left: -40px;
+        bottom: 0;
+        div:nth-child(1) {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  &.rotate {
+    transform: rotate(90deg);
+    .fasad-control--move {
+      transform: rotate(-90deg);
+      &:nth-child(1) {
+        top: 0;
+        bottom: 0;
+        left: -14.5px;
+        right: initial;
+      }
+      &:nth-child(2) {
+        left: 0;
+        top: -14.5px;
+        right: 0;
+        bottom: initial;
+      }
+      &:nth-child(3) {
+        top: 0;
+        right: -14.5px;
+        bottom: 0;
+        left: initial;
+      }
+      &:nth-child(4) {
+        bottom: -14.5px;
+        left: 0;
+        right: 0;
+        top: initial;
+      }
+    }
+    .fasad-control--extinds {
+      &:nth-child(1) {
+        top: -14.5px;
+        bottom: initial;
+        left: -14.5px;
+        right: 0px;
+        div:nth-child(1) {
+          transform: rotate(90deg);
+        }
+      }
+      &:nth-child(2) {
+        left: initial;
+        top: 0;
+        right: -40px;
+        bottom: 0;
+        div:nth-child(1) {
+          transform: rotate(0deg);
+        }
+      }
+      &:nth-child(3) {
+        left: 0;
+        top: initial;
+        right: 0;
+        bottom: -14.5px;
+        div:nth-child(1) {
+          transform: rotate(90deg);
+        }
+      }
+      &:nth-child(4) {
+        bottom: 0;
+        left: -40px;
+        right: initial;
+        top: 0;
+        div:nth-child(1) {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+}
+
+.modal .cropper-point {
+  &.point-n, &.point-s, &.point-e, &.point-w {
+    display: none;
+  }
+}

@@ -1,0 +1,46 @@
+.topParams {
+  position: absolute;
+  top: -80px;
+  display: flex;
+  justify-content: center;
+  input {
+    width: 80%;
+    text-align: center;
+    font-size: 0.7em;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 62px;
+    border: 1px solid black;
+    border-bottom: none;
+    bottom: -50px;
+    z-index: -1;
+  }
+}
+
+.rightParams {
+  position: absolute;
+  right: -142px;
+  display: flex;
+  align-items: center;
+  z-index: 4;
+  input {
+    width: 80%;
+    text-align: center;
+    font-size: 0.7em;
+    height: 24px;
+    font-size: 0.7em;
+    transform: rotate(90deg);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 100%;
+    border: 1px solid black;
+    border-left: none;
+    z-index: -1;
+  }
+}

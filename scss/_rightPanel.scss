@@ -1,0 +1,166 @@
+.panel.panel--right {
+  min-height: calc(100% - 74px);
+  max-height: calc(100% - 74px);
+  .panel-content {
+    height: 100%;
+    position: relative;
+    #panelContentTextures {
+      display: flex;
+      flex-direction: column;
+      height: 96%;
+      justify-content: space-between;
+    }
+  }
+  #imageContainer {
+    max-height: calc(100% - 84px);
+    overflow-y: auto;
+  }
+
+  #listMaterialsRight {
+    padding-bottom: 50px;
+    height: 100%;
+    overflow-y: auto;
+    .list-item--protective-film {
+      position: absolute;
+      top: 6%;
+      right: 4%;
+      color: var(--c-primary);
+      font-size: 1.5em;
+    }
+  }
+
+  .list-item {
+    img {
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+    }
+  }
+  .fotofasad--add--image {
+    color: black;
+    button {
+      padding: 10px 36px;
+      border: 1px solid var(--c-grey-border);
+      background-color: var(--c-grey-l-3);
+      &:hover {
+        background-color: var(--c-grey);
+      }
+      &:focus {
+        box-shadow: 0 0 0 0.25rem var(--c-grey);
+      }
+    }
+  }
+}
+
+.panel--right-total {
+  box-shadow: var(--shadow-panel);
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  #projectWirking {
+    color: white;
+    background-color: var(--c-grey);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 74px;
+    padding: 10px;
+    transition: 0.5s;
+    z-index: 5000;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    div {
+      margin: 0 auto;
+      text-align: center;
+      i {
+        font-size: 24px;
+        position: relative;
+        #projectQty {
+          position: absolute;
+          font-size: 12px;
+          color: var(--c-dark);
+          background-color: white;
+          left: 110%;
+          font-family: var(--bs-font-sans-serif);
+          display: none;
+        }
+      }
+      .project--text {
+        font-size: 12px;
+      }
+      &:hover {
+        cursor: pointer;
+        color: var(--c-grey-l-1);
+      }
+    }
+  }
+  .form-check-input:checked[type="checkbox"] {
+    background-color: var(--c-primary);
+    border: var(--c-primary);
+  }
+  .form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem var(--c-primary-l-1);
+    border: var(--c-primary);
+  }
+  .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-primary);
+  }
+}
+
+@media (max-width: 1300px) {
+  .panel--right-total {
+    z-index: 900;
+    overflow: hidden;
+    height: var(--s-controls);
+    position: absolute;
+    top: calc(var(--s-controls));
+    left: calc(340px + var(--s-controls));
+    min-height: 0;
+    display: flex;
+    cursor: pointer;
+    #projectWirking {
+      display: none !important;
+    }
+    .panel.panel--right {
+      max-height: 46px;
+      min-height: 0;
+      overflow: hidden;
+    }
+  }
+  .panel--right-total.is-mobile-active {
+    height: fit-content;
+    z-index: 2000;
+    ul {
+      max-height: calc(var(--h-min-global) - 120px);
+    }
+    ul.list--materials {
+      display: block;
+    }
+    ul.list--textures {
+      display: flex;
+    }
+    #projectWirking {
+      display: flex !important;
+    }
+    .panel.panel--right {
+      // max-height: calc(var(--h-min-global) - 120px);
+      min-height: calc(var(--h-min-global) - 120px);
+      overflow-y: hidden;
+      .panel-content {
+        // max-height: calc(var(--h-min-global) - 120px);
+        min-height: calc(var(--h-min-global) - 120px);
+      }
+    }
+  }
+}
+
+@media (max-height:866px) {
+  #panelContentTextures {
+    height: 92% !important;
+  }
+}

@@ -1,0 +1,211 @@
+.admin_header {
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
+    .navbar {
+        background-color: var(--c-primary);
+    }
+    .navbar-brand {
+        color: white;
+    }
+    .navbar-toggler {
+        border-color: white;
+        i {
+            color: white;
+        }
+        &:focus {
+            box-shadow: 0 0 0 0.1rem white;
+        }
+    }
+    .btn-outline-success {
+        color: white;
+        border-color: white;
+        &:focus {
+            box-shadow: 0 0 0 0.1rem white;
+        }
+        &:active {
+            background-color: transparent;
+            border: 1px solid white;
+            box-shadow: inset 0px 0px 0px white;;
+        }
+        &:hover {
+            background-color: white;
+            color: var(--c-primary);
+            border: 1px solid white;
+        }
+    }
+    .form-control {
+        &:focus {
+            box-shadow: 0 0 0 0.1rem white;
+        }
+        &:active {
+            background-color: transparent;
+            border: 1px solid white;
+            box-shadow: inset 0px 0px 0px white;;
+        }
+        &:hover {
+            background-color: white;
+            border: 1px solid white;
+        }
+    }
+}
+
+.admin_panel {
+    height: fit-content;
+    overflow-x: hidden;
+    min-height: 100%;
+    padding-top: 46px;
+    background-image: repeating-linear-gradient(to bottom, transparent, transparent 4px, var(--c-grey-l-2) 4px, var(--c-grey-l-2) 5px), repeating-linear-gradient(to right, var(--c-grey-l-4), var(--c-grey-l-4) 4px, var(--c-grey-l-2) 4px, var(--c-grey-l-2) 5px);
+    &:after {
+        content: '';
+        z-index: 101;
+        position: fixed;
+        display: block;
+        height: 2px;
+        right: 0;
+        background: var(--c-primary);
+        width: 100%;
+        bottom: 0;
+    }
+    .admin_panel--main {
+        .list-group {
+            box-shadow: var(--shadow-panel);
+            border-radius: 0;
+            background-color: white;
+            position: fixed;
+            bottom: 0;
+            top: 46px;
+            .list-group-item {
+                border: none;
+                border-bottom: 1px solid rgba(0,0,0,.125);
+                padding: 0;
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: var(--c-grey);
+                    padding: 16px 25px;
+                    font-weight: 700;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    &:hover {
+                        background-color: lighten($c-grey-l-0, 26);
+                    }
+                }
+            }
+        }
+
+        .admin_container-add-materials {
+            margin-top: 10px;
+
+           &>div {
+            border: 1px solid $c-grey-l-0;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0 20px;
+            label {
+                width: 100%;
+                text-align: center;
+            }
+           }
+
+            .form-label {
+                color: var(--c-dark);
+                font-weight: 700;
+            }
+
+            .form-control {
+                &:focus {
+                    box-shadow: 0 0 0 0.1rem white;
+                }
+                &:active {
+                    background-color: transparent;
+                    border: 1px solid white;
+                    box-shadow: inset 0px 0px 0px white;;
+                }
+                &:hover {
+                    background-color: white;
+                    border: 1px solid white;
+                }
+            }
+
+        }
+
+
+
+        .admin_list-project {
+            padding: 0 10px 14px 10px;
+            .card-title {
+                color: var(--c-dark);
+                text-align: center;
+            }
+            .card-text {
+                text-align: center;
+                color: var(--c-grey-l-0);
+            }
+
+        }
+
+    }
+}
+
+#formContainerAdmin {
+    width:100%;
+    height:100%;
+    .form-select {
+        margin-bottom: 10px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .admin_header {
+        .navbar-toggler {
+            display: inline-block;
+        }
+    }
+
+    .admin_panel .admin_panel--main #listNavigationAdmin {
+        display: none;
+        &.isActive {
+            display: block;
+        }
+    }
+}
+
+
+
+.admin_edit-materials {
+    .admin_edit-materials-row {
+        padding: 40px;
+        margin: 10px;
+        border: 1px solid $c-grey-l-0;
+        border-radius: 5px;
+        #adminEditMaterialsContainer {
+            .list-images {
+                cursor: pointer;
+                .admin-materials_images {
+                    width: 100%;
+                    height: 92px;
+                    border-radius: 5px;
+                }
+                .focus_add_material {
+                    width: 100%;
+                    height: 92px;
+                    border-radius: 5px;
+                    border: 1px solid black;
+                    font-size: 70px;
+                    border: 1px solid rgba(0,0,0,.125);
+                    color: $primary;
+                    background-color: #f5f6f6;
+                    transition: .2s;
+                    &:hover {
+                        background-color: #e5e7e8;
+                    }
+                }
+            }
+        }
+    }
+
+}

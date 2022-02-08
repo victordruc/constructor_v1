@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 26.5729 22.9732" role="img" aria-labelledby="title"  width="100%" height="100%">
+  <g id="carcass">
+    <rect class="depthBg" x="2.19104" y="1.84319" width="22.1912" height="19.4731" style="fill:#e4e7e7"></rect>
+    <polygon class="depthSide depthRight"  style="fill:#d5dada" points="24.3812,1.84319 26.5614,0.0137768 26.5614,2.89099 26.5614,20.2729 26.5614,23.1501 24.3812,21.3207 24.3812,20.297 24.3812,2.8669 "></polygon>
+    <polygon class="depthSide depthLeft"  style="fill:#d5dada" points="2.19221,1.84218 0.0120288,0.0127648 0.0120288,2.88998 0.0120288,20.2719 0.0120288,23.1491 2.19221,21.3197 2.19221,20.2959 2.19221,2.86588 "></polygon>
+    <polygon class="depthTop " style="fill:#d5dada" points="4.28034,0.0125233 22.2949,0.0125233 26.5628,0.0125233 24.3822,1.84631 22.2949,1.84631 4.28034,1.84631 2.19301,1.84631 0.0124313,0.0125233 "></polygon>
+    <polygon class="depthLine" style="fill:white" points="25.835,0.624567 25.6903,0.74627 0.884935,0.74627 0.740221,0.624567 "></polygon>
+    <polygon class="depthLine" style="fill:white" points="26.0482,0.445239 25.9035,0.566942 0.671694,0.566942 0.52698,0.445239 "></polygon>
+    <polygon class="depthBottom " style="fill:#d5dada" points="4.28483,23.1557 22.2994,23.1557 26.5673,23.1557 24.3867,21.3219 22.2994,21.3219 4.28483,21.3219 2.19749,21.3219 0.0169163,23.1557 "></polygon>
+    <polygon class="depthLine" style="fill:white" points="25.8395,22.5436 25.6948,22.4219 0.88942,22.4219 0.744706,22.5436 "></polygon>
+    <polygon class="depthLine" style="fill:white" points="26.0527,22.723 25.908,22.6013 0.676179,22.6013 0.531465,22.723 "></polygon>
+    
+    
+    
+    <polygon class="touch" points="12.5661,22.9586 13.252,22.9586 13.252,23.0046 12.5661,23.0046 "></polygon>
+    
+    <!-- <polygon class="depthUnder" points="0.455439,0.455715 26.1558,0.455715 26.1558,22.728 0.455439,22.728 "></polygon> -->
+  </g>
+</svg>
